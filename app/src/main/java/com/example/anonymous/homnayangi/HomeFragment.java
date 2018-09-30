@@ -24,13 +24,16 @@ import model.Restaurants;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements OnClickSetName {
    private RecyclerView rcvHightlights;
    private RecyclerView rcvInteraction;
 
     private RecyclerView rcvRestaurants;
     private ArrayList<Restaurants> restaurantsArrayList;
     private AdapterRestaurants adapterRestaurants;
+
+    private OnClickSetName onClickSetName = this;
+    private TextView txtNameUser;
 
 
 
@@ -47,6 +50,7 @@ public class HomeFragment extends Fragment {
                              Bundle savedInstanceState) {
         final View itemView = inflater.inflate(R.layout.fragment_home, container, false);
         txtNameUniversity = itemView.findViewById(R.id.txtNameUniversity);
+        txtNameUser = itemView.findViewById(R.id.nameUser);
         txtNextActivity = itemView.findViewById(R.id.txtNextActivity);
         txtNextActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -96,4 +100,8 @@ public class HomeFragment extends Fragment {
     }
 
 
+    @Override
+    public void onClickSetName(String text) {
+        txtNameUser.setText(text);
+    }
 }
