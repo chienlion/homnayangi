@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#f5f5f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/tocotoco" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                android:text="Xin Chào"
+                android:textColor="#181815"
+                android:textSize="17dp" />
+
+            <TextView
+                android:id="@+id/txtNameUniversity"
+                style="@style/textView"
+                android:layout_gravity="center"
+                android:text="textView" />
+
+            <RelativeLayout
+                android:id="@+id/layout_find"
+                android:layout_width="match_parent"
+                android:layout_height="43dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txtNextActivity"
+                    android:background="#ffffff"
+                    android:gravity="center"
+                    android:textSize="17dp"
+                    android:layout_width="285dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerHorizontal="true"
+                    android:text="Bạn muốn ăn ở đâu?" />
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/textView"
+                android:layout_marginTop="5dp"
+                android:text="Gần tôi"
+                android:textColor="#1e1e1d" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcvRestaurants"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff"
+                android:orientation="horizontal"></android.support.v7.widget.RecyclerView>
+
+            <TextView
+                style="@style/textView"
+                android:layout_marginTop="9dp"
+                android:text="Nổi bật" />
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcvHighlights"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="#ffffff">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <!--<TextView-->
+                <!--style="@style/textView"-->
+                <!--android:layout_marginTop="9dp"-->
+                <!--android:text="Mới tương tác" />-->
+
+            <!--<android.support.v7.widget.RecyclerView-->
+                <!--android:id="@+id/rcvInteraction"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#ffffff">-->
+
+            <!--</android.support.v7.widget.RecyclerView>-->
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

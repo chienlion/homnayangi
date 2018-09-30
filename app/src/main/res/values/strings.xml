@@ -1,0 +1,103 @@
+<resources>
+    <string name="app_name">hom nay an gi</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Saved</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_bottom_navigation">BottomNavigationActivity</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="nav_account">Account</string>
+    <string name="texview_startactivity">Nhập tên trường đại học/ cao đẳng</string>
+    <string name="hint_autoComplexTextView">Nhập tên trường đại học/ Cao đẳng</string>
+    <string name="button_find">Tìm kiếm</string>
+    <string name="imageView_comment">25 bình luận</string>
+    <string name="imageView_image">10 hình ảnh</string>
+    <string name="imageView_like">25 Lượt thích</string>
+    <string name="imageView_save">lưu lại</string>
+    <string name="imageView_favorite">Yêu thích</string>
+    <string-array name="arrayUniversity">
+        <item>	Đại học Quốc gia Hà Nội	</item>
+        <item>	Học viện Âm nhạc Quốc gia Việt Nam	</item>
+        <item>	Học viện Báo chí Tuyên truyền	</item>
+        <item>	Học viện Chính sách và Phát triển	</item>
+        <item>	Học viện Ngân hàng	</item>
+        <item>	Học viện Ngoại giao	</item>
+        <item>	Học viện Công nghệ Bưu chính Viễn thông	</item>
+        <item>	Học viện Y Dược học cổ truyền Việt Nam	</item>
+        <item>	Học viện Hành chính Quốc gia	</item>
+        <item>	Học viện Kỹ thuật Mật mã	</item>
+        <item>	Học viện Quản lý Giáo dục	</item>
+        <item>	Học viện Tài chính	</item>
+        <item>	Học viện Thanh Thiếu niên Việt Nam	</item>
+        <item>	Trường Đại học Bách khoa Hà Nội	</item>
+        <item>	Trường Đại học Công nghệ Giao thông vận tải	</item>
+        <item>	Trường Đại học Công đoàn	</item>
+        <item>	Trường Đại học Công nghiệp Hà Nội	</item>
+        <item>	Trường Đại học Dược Hà Nội	</item>
+        <item>	Trường Đại học Điện lực	</item>
+        <item>	Trường Đại học Giao thông vận tải	</item>
+        <item>	Trường Đại học Hà Nội	</item>
+        <item>	Trường Đại học Khoa học và Công nghệ Hà Nội	</item>
+        <item>	Trường Đại học Lao động Xã hội	</item>
+        <item>	Trường Trường Đại học Kinh tế Kỹ thuật Công nghiệp	</item>
+        <item>	Trường Đại học Kinh tế Quốc dân	</item>
+        <item>	Trường Đại học Kiến trúc Hà Nội	</item>
+        <item>	Trường Đại học Lâm nghiệp	</item>
+        <item>	Trường Đại học Luật Hà Nội	</item>
+        <item>	Trường Đại học Thương mại	</item>
+        <item>	Trường Đại học Văn hóa Hà Nội	</item>
+        <item>	Trường Trường Đại học Mỹ thuật Công nghiệp	</item>
+        <item>	Trường Đại học Nội vụ Hà Nội	</item>
+        <item>	Trường Đại học Nông nghiệp Hà Nội	</item>
+        <item>	Trường Đại học Sân khấu Điện ảnh	</item>
+        <item>	Trường Trường Đại học Mỏ Địa chất Hà Nội	</item>
+        <item>	Trường Đại học Ngoại thương	</item>
+        <item>	Trường Đại học Sư phạm Hà Nội	</item>
+        <item>	Trường Đại học Sư phạm Nghệ thuật Trung ương Hà Nội	</item>
+        <item>	Trường Đại học Sư phạm Thể dục thể thao Hà nội	</item>
+        <item>	Trường Đại học Tài nguyên và Môi trường Hà Nội	</item>
+        <item>	Trường Đại học Thủy lợi	</item>
+        <item>	Trường Đại học Xây dựng	</item>
+        <item>	Trường Đại học Y Hà Nội	</item>
+        <item>	Trường Đại học Y tế Công cộng	</item>
+        <item>	Trường Cao đẳng Y Dược Pasteur	</item>
+        <item>	Trường Cao đẳng nghề Công nghiệp Hà Nội	</item>
+        <item>	Trường Cao đẳng Du lịch Hà Nội	</item>
+        <item>	Trường Cao đẳng Kinh tế Kỹ thuật Hà Nội	</item>
+        <item>	Trường Cao đẳng Kinh tế Kỹ thuật Trung ương	</item>
+        <item>	Trường Cao đẳng Công nghiệp In	</item>
+        <item>	Trường Cao đẳng Cộng đồng Hà Tây	</item>
+        <item>	Trường Cao đẳng Công nghệ Hà Nội	</item>
+        <item>	Trường Cao đẳng Công nghệ và Môi trường	</item>
+        <item>	Trường Cao đẳng Công nghệ và Thương mại Hà Nội	</item>
+        <item>	Trường Cao đẳng Truyền hình – Đài Truyền hình Việt Nam	</item>
+        <item>	Trường Cao đẳng nghề Cơ điện và Công nghệ thực phẩm Hà Nội	</item>
+        <item>	Trường Cao đẳng Công thương Hà Nội	</item>
+        <item>	Trường Cao đẳng Công thương Việt Nam	</item>
+        <item>	Trường Cao đẳng Điện tử – Điện lạnh Hà Nội	</item>
+        <item>	Trường Cao đẳng Nghệ thuật Hà Nội	</item>
+        <item>	Trường Cao đẳng Nông nghiệp và phát triển nông thôn Bắc Bộ.	</item>
+        <item>	Trường Cao đẳng nghề Kỹ thuật và Nghiệp vụ Hà Nội	</item>
+        <item>	Trường Cao đẳng Y tế Hà Nội	</item>
+        <item>	Trường Cao đẳng Nghề Bách Khoa	</item>
+        <item>	Trường Cao Đẳng Nghề Văn Lang Hà Nội	</item>
+        <item>	Trường Cao đẳng Cộng đồng Hà Nội	</item>
+        <item>	Trường Cao đẳng Đường sắt	</item>
+        <item>	Trường Cao đẳng Kinh tế Công nghiệp Hà Nội	</item>
+        <item>	Trường Cao Đẳng nghề Hùng Vương	</item>
+        <item>	Trường Cao đẳng nghề Kỹ thuật Công nghệ	</item>
+        <item>	Trường Cao đẳng nghề Công Nghệ Và Kinh Tế Hà Nội	</item>
+        <item>	Trường Cao đẳng nghề Công nghệ và kỹ thuật Trần Hưng Đạo.	</item>
+        <item>	Trường Cao đẳng nghề Kỹ thuật – Mỹ nghệ Việt Nam	</item>
+        <item>	Trường Cao đẳng nghề Long Biên	</item>
+        <item>	Trường Cao Đẳng Múa Việt Nam	</item>
+        <item>	Trường Cao đẳng Thương mại và Du lịch Hà Nội	</item>
+        <item>	Trường Cao đẳng nghề Công nghệ Cao Hà Nội	</item>
+        <item>	Trường Cao đẳng nghề Thăng Long	</item>
+        <item>	Trường Cao đẳng nghề Kỹ thuật Thiết bị Y tế	</item>
+        <item>	Trường Cao Đẳng Nghề Văn Lang Hà Nội	</item>
+        <item>	Phòng tuyển sinh cao đẳng y dược hà nội	</item>
+
+    </string-array>
+</resources>
