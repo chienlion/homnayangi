@@ -41,7 +41,6 @@
         <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".RestaurantsDetailsActivity" />
         <activity android:name=".FindActivity" />
-        <activity android:name=".StartActivity"></activity>
     </application>
 
 </manifest>

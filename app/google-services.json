@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "572426211245",
+    "firebase_url": "https://imposing-union-216816.firebaseio.com",
+    "project_id": "imposing-union-216816",
+    "storage_bucket": "imposing-union-216816.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:572426211245:android:012dda487306f22d",
+        "android_client_info": {
+          "package_name": "com.example.anonymous.homnayangi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "572426211245-8tv3hsq9ip8fkpvmgm0b94r1fmuvukaa.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.anonymous.homnayangi",
+            "certificate_hash": "3c10c196f04b59abf7d6b8f3464417e33d03a0ad"
+          }
+        },
+        {
+          "client_id": "572426211245-f9jddoq92snstgsnlq2ccdnpta1tcgnn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBXeWlNOkZeScHxU8mXhwpD1Hiqut_rTeQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "572426211245-f9jddoq92snstgsnlq2ccdnpta1tcgnn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -52,6 +52,7 @@ public class LoginWithFbActivity extends AppCompatActivity {
                 // App code
                 Intent intent = new Intent(LoginWithFbActivity.this, BottomNavigationActivity.class);
                 startActivity(intent);
+                finish();
             }
 
             @Override
