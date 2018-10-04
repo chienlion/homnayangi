@@ -6,8 +6,14 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.FrameLayout;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import model.Restaurants;
 
 public class BottomNavigationActivity extends AppCompatActivity {
     private FrameLayout mainframe;
@@ -20,6 +26,8 @@ public class BottomNavigationActivity extends AppCompatActivity {
 
 
     // activity nó có hàm onCeate, còn fragment là onCreatView
+    DatabaseReference mdata;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +41,8 @@ public class BottomNavigationActivity extends AppCompatActivity {
         notificationsFragment = new NotificationsFragment();
         accountFragment = new AccountFragment();
         setFragment(homeFragment);
+
+
 
 
 

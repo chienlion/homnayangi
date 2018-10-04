@@ -47,7 +47,7 @@ public class AdapterSaved extends ArrayAdapter<Restaurants>{
             holder = new ViewHolder2();
             convertView = inflater.inflate(R.layout.item_saved,parent,false);
 
-            holder.imgSavedRestaurant = convertView.findViewById(R.id.imgSavedRestaurant);
+            holder.imgSavedRestaurant = convertView.findViewById(R.id.imgRestaurantNotification);
             holder.tvTitle = convertView.findViewById(R.id.tvTitle);
             holder.tvAddress = convertView.findViewById(R.id.tvAddress);
             holder.tvSpecies = convertView.findViewById(R.id.tvSpecies);
@@ -60,7 +60,7 @@ public class AdapterSaved extends ArrayAdapter<Restaurants>{
         }
 
         final Restaurants rs = list.get(position);
-        holder.imgSavedRestaurant.setImageResource(rs.getImage());
+//        holder.imgSavedRestaurant.setImageResource(rs.getImage());
         holder.tvTitle.setText(rs.getTitle());
         holder.tvAddress.setText(rs.getAddress());
         holder.tvSpecies.setText(rs.getSpecies());

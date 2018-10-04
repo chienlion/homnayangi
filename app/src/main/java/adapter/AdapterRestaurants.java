@@ -42,7 +42,7 @@ public class AdapterRestaurants extends RecyclerView.Adapter<AdapterRestaurants.
     @Override
     public void onBindViewHolder(@NonNull AdapterRestaurants.ViewHolder holder, final int position) {
         holder.txtTitle.setText(list.get(position).getTitle());
-        holder.imgRestaurants.setImageResource(list.get(position).getImage());
+//        holder.imgRestaurants.setImageResource(list.get(position).getImage());
         holder.txtAddress.setText(list.get(position).getAddress());
         holder.txtTitle.setText(list.get(position).getSpecies());
 

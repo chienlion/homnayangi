@@ -68,6 +68,7 @@
             </RelativeLayout>
 
             <TextView
+                android:textColor="#1e1e1d"
                 style="@style/textView"
                 android:layout_marginTop="9dp"
                 android:text="Nổi bật" />

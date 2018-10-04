@@ -50,7 +50,7 @@
 
         <Button
             android:textAllCaps="false"
-            android:id="@+id/button8"
+            android:id="@+id/btnLogout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Đăng xuất" />

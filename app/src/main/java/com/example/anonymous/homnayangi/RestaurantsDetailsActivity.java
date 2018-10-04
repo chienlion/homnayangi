@@ -5,16 +5,24 @@ import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class RestaurantsDetailsActivity extends AppCompatActivity {
     private int imageView;
     private String title;
     private String address;
     private String openAndClose;
 
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_restaurants_details);
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("university");
         if(getIntent().hasExtra("IMAGE_RESTAURANTS")&&getIntent().hasExtra("TITLE_RESTAURANTS")&&getIntent().hasExtra("ADDRESS_RESTAURANTS")&&getIntent().hasExtra("OPENANDCLOSE")){
             imageView = getIntent().getIntExtra("IMAGE_RESTAURANTS",R.drawable.dingtea);
             title = getIntent().getStringExtra("TITLE_RESTAURANTS");

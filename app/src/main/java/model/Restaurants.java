@@ -4,7 +4,7 @@ public class Restaurants {
     private String title;
     private String address;
     private String species; // loại nhà hàng ( cafe ) hoặc nhà hàng ẩm thực v.v
-    private int image;
+    private String image;
     private String sale;
     private String OpenSale;
     private String CloseSale;
@@ -13,7 +13,7 @@ public class Restaurants {
 
 
 
-    public Restaurants(String title, String address, int image, String openAndClose) {
+    public Restaurants(String title, String address, String image, String openAndClose) {
         this.title = title;
         this.address = address;
         this.image = image;
@@ -21,12 +21,18 @@ public class Restaurants {
     }
 
     //phuong thuc khoi tao cho Save
-    public Restaurants(String title, String address, String species, int image,String timeSave) {
+    public Restaurants(String title, String address, String species, String image,String timeSave) {
         this.title = title;
         this.address = address;
         this.species = species;
         this.image = image;
         this.TimeSave = timeSave;
+    }
+
+    public Restaurants(String title, String address, String image) {
+        this.title = title;
+        this.address = address;
+        this.image = image;
     }
 
     public Restaurants() {
@@ -42,7 +48,7 @@ public class Restaurants {
         this.openAndClose = openAndClose;
     }
 
-    public Restaurants(String title, String address, int image, String sale, String openSale, String closeSale) {
+    public Restaurants(String title, String address, String image, String sale, String openSale, String closeSale) {
         this.title = title;
         this.address = address;
         this.image = image;
@@ -99,11 +105,11 @@ public class Restaurants {
         this.species = species;
     }
 
-    public int getImage() {
+    public String getImage() {
         return image;
     }
 
-    public void setImage(int image) {
+    public void setImage(String image) {
         this.image = image;
     }
 
@@ -116,13 +122,7 @@ public class Restaurants {
     }
 
 
-    public Restaurants(String title, String address, String species, int image) {
 
-        this.title = title;
-        this.address = address;
-        this.species = species;
-        this.image = image;
-    }
 
 
 
