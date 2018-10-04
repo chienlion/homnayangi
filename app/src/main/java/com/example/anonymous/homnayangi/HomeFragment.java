@@ -25,8 +25,8 @@ import model.Restaurants;
  * A simple {@link Fragment} subclass.
  */
 public class HomeFragment extends Fragment implements OnClickSetName {
-   private RecyclerView rcvHightlights;
-   private RecyclerView rcvInteraction;
+    private RecyclerView rcvHightlights;
+    private RecyclerView rcvInteraction;
 
     private RecyclerView rcvRestaurants;
     private ArrayList<Restaurants> restaurantsArrayList;

@@ -11,7 +11,6 @@ import android.view.ViewGroup;
 
 import java.util.ArrayList;
 
-import adapter.AdapterNotifications;
 import model.Restaurants;
 
 
@@ -21,7 +20,7 @@ import model.Restaurants;
 public class NotificationsFragment extends Fragment {
     private RecyclerView rcvNotifications;
     private ArrayList<Restaurants> restaurantsArrayList;
-    private AdapterNotifications adapterNotifications;
+//    private AdapterNotifications adapterNotifications;
 
 
     public NotificationsFragment() {
@@ -52,8 +51,8 @@ public class NotificationsFragment extends Fragment {
         restaurantsArrayList.add(new Restaurants("TocoToco","123 phố viên",R.drawable.tocotoco,"50%","15/9","19/9"));
         restaurantsArrayList.add(new Restaurants("TocoToco","123 phố viên",R.drawable.tocotoco,"50%","15/9","19/9"));
 
-        adapterNotifications = new AdapterNotifications(restaurantsArrayList,getContext(),R.layout.item_notifications);
-        rcvNotifications.setAdapter(adapterNotifications);
+//        adapterNotifications = new AdapterNotifications(restaurantsArrayList,getContext(),R.layout.item_notifications);
+//        rcvNotifications.setAdapter(adapterNotifications);
         // Inflate the layout for this fragment
         return itemView;
     }

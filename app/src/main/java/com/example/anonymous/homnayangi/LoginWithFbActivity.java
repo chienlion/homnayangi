@@ -27,6 +27,7 @@ public class LoginWithFbActivity extends AppCompatActivity {
         if (AccessToken.getCurrentAccessToken() != null) {
             Intent intent = new Intent(LoginWithFbActivity.this, BottomNavigationActivity.class);
             startActivity(intent);
+            finish();
         }
 
     }

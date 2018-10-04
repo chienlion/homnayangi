@@ -46,17 +46,17 @@ public class AdapterRestaurants extends RecyclerView.Adapter<AdapterRestaurants.
         holder.txtAddress.setText(list.get(position).getAddress());
         holder.txtTitle.setText(list.get(position).getSpecies());
 
-            holder.parent_layout.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(context, RestaurantsDetailsActivity.class);
-                    intent.putExtra("IMAGE_RESTAURANTS",list.get(position).getImage());
-                    intent.putExtra("TITLE_RESTAURANTS",list.get(position).getTitle());
-                    intent.putExtra("ADDRESS_RESTAURANTS",list.get(position).getAddress());
-                    intent.putExtra("OPENANDCLOSE",list.get(position).getOpenAndClose());
-                    context.startActivity(intent);
-                }
-            });
+        holder.parent_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, RestaurantsDetailsActivity.class);
+                intent.putExtra("IMAGE_RESTAURANTS",list.get(position).getImage());
+                intent.putExtra("TITLE_RESTAURANTS",list.get(position).getTitle());
+                intent.putExtra("ADDRESS_RESTAURANTS",list.get(position).getAddress());
+                intent.putExtra("OPENANDCLOSE",list.get(position).getOpenAndClose());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
