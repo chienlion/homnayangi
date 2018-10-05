@@ -4,6 +4,7 @@ package com.example.anonymous.homnayangi;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,6 +15,7 @@ import com.facebook.login.LoginManager;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+//TODO : Xử lý khi không có mạng mà vẫn đăng xuất được
 
 /**
  * A simple {@link Fragment} subclass.
@@ -45,17 +47,17 @@ public class AccountFragment extends Fragment {
         });
         return itemView;
     }
-    @Override
-    public void onStart() {
-        super.onStart();
-        // Check if user is signed in (non-null) and update UI accordingly.
-        FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
-        if(currentUser==null){
-            updateUI();
-
-        }
-
-    }
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        FirebaseUser currentUser = mFirebaseAuth.getCurrentUser();
+//        Log.d("AAAAAAAAAAA",currentUser.toString());
+//        if(currentUser==null){
+//            updateUI();
+//        }
+//
+//    }
 
     private void updateUI() {
         Toast.makeText(getContext(), "Đã đăng xuất", Toast.LENGTH_SHORT).show();

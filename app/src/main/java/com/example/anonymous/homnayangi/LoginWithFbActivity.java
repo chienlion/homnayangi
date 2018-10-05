@@ -28,6 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 import java.util.Arrays;
 
+
 public class LoginWithFbActivity extends AppCompatActivity {
     CallbackManager callbackManager;
     LoginButton loginButton;
@@ -44,6 +45,8 @@ public class LoginWithFbActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_with_fb);
         mAuth = FirebaseAuth.getInstance();
         btnLoginFacebook = findViewById(R.id.btnLoginFacebook);
+        mCallbackManager = CallbackManager.Factory.create();
+
         btnLoginFacebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -52,11 +55,9 @@ public class LoginWithFbActivity extends AppCompatActivity {
                 LoginManager.getInstance().registerCallback(mCallbackManager, new FacebookCallback<LoginResult>() {
                     @Override
                     public void onSuccess(LoginResult loginResult) {
-//                Log.d(TAG, "facebook:onSuccess:" + loginResult);
+                Log.d("AAAAAAAAAAAAAAA", "facebook:onSuccess:" + loginResult);
                         handleFacebookAccessToken(loginResult.getAccessToken());
 
-                        Intent intent = new Intent(LoginWithFbActivity.this, BottomNavigationActivity.class);
-                        startActivity(intent);
                     }
 
                     @Override
@@ -75,7 +76,6 @@ public class LoginWithFbActivity extends AppCompatActivity {
         });
 
 
-        mCallbackManager = CallbackManager.Factory.create();
 
     }
 
@@ -114,20 +114,17 @@ public class LoginWithFbActivity extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-//                            Log.d(TAG, "signInWithCredential:success");
+                            Log.d("AAAAAAAAAAA", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            btnLoginFacebook.setEnabled(true);
                             updateUI();
                         } else {
                             // If sign in fails, display a message to the user.
-//                            Log.w(TAG, "signInWithCredential:failure", task.getException());
+                            Log.w("AAAAAAAAAAAAA", "signInWithCredential:failure", task.getException());
                             Toast.makeText(LoginWithFbActivity.this, "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            btnLoginFacebook.setEnabled(true);
-                            updateUI();
                         }
 
-
+                        // ..
                     }
                 });
     }

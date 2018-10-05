@@ -35,20 +35,16 @@ import model.Restaurants;
  */
 public class HomeFragment extends Fragment {
     private RecyclerView rcvHightlights;
-    private RecyclerView rcvInteraction;
 
     private RecyclerView rcvRestaurants;
-    private ArrayList<Restaurants> restaurantsArrayList;
-    private AdapterRestaurants adapterRestaurants;
-
-    private TextView txtNameUser;
 
 
-    private TextView txtNameUniversity;
+
     private TextView txtNextActivity;
 
     private FirebaseDatabase firebaseDatabase;
-    private DatabaseReference databaseReference;
+    private DatabaseReference databaseHighLights;
+    private DatabaseReference databaseNear;
 
     private FirebaseRecyclerAdapter<Restaurants, MyViewHolder> adapter;
     private FirebaseRecyclerOptions<Restaurants> options;
@@ -63,8 +59,6 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         final View itemView = inflater.inflate(R.layout.fragment_home, container, false);
-        txtNameUniversity = itemView.findViewById(R.id.txtNameUniversity);
-        txtNameUser = itemView.findViewById(R.id.nameUser);
         txtNextActivity = itemView.findViewById(R.id.txtNextActivity);
         txtNextActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,28 +69,28 @@ public class HomeFragment extends Fragment {
         });
 
         firebaseDatabase = FirebaseDatabase.getInstance();
-        databaseReference = firebaseDatabase.getReference("university");
+        databaseHighLights = firebaseDatabase.getReference("highlights");
+        databaseNear = firebaseDatabase.getReference("university");
+//        Restaurants restaurants = new Restaurants("title","address","https://mbtskoudsalg.com/images/blue-eye-png.png");
+//        databaseHighLights.push().setValue(restaurants);
 
 
-//
         rcvHightlights = itemView.findViewById(R.id.rcvHighlights);
         rcvHightlights.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
 
         rcvRestaurants = itemView.findViewById(R.id.rcvRestaurants);
         rcvRestaurants.setLayoutManager(new LinearLayoutManager(getContext(), LinearLayoutManager.HORIZONTAL, false));
-        displayRestaurants();
-
-        post();
+        displayRestaurants(databaseHighLights);
+        rcvHightlights.setAdapter(adapter);
+        displayRestaurants(databaseNear);
+        rcvRestaurants.setAdapter(adapter);
 
 
         return itemView;
     }
 
-    private void post() {
 
-    }
-
-    private void displayRestaurants() {
+    private void displayRestaurants(DatabaseReference databaseReference) {
         options = new FirebaseRecyclerOptions.Builder<Restaurants>().setQuery(databaseReference, Restaurants.class).build();
         Log.d("AAAAAAAAAAAAAAAAA", "AAAAAAAAAAAAAAAAAAA");
         adapter = new FirebaseRecyclerAdapter<Restaurants, MyViewHolder>(options) {
@@ -116,8 +110,7 @@ public class HomeFragment extends Fragment {
             }
         };
         adapter.startListening();
-        rcvRestaurants.setAdapter(adapter);
-        rcvHightlights.setAdapter(adapter);
+
         adapter.notifyDataSetChanged();
 
     }
